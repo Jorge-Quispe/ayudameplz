@@ -13,14 +13,10 @@ libros : Libro[];
   constructor(private service:ServiceService, private router:Router) { }
 
   ngOnInit(): void  {
-     this.listarlibros();
-     
-      }
-      listarlibros(){
         this.service.getbiblioteca()
-        .subscribe(data=>{this.libros=data;
+        .subscribe(data=>{
+          this.libros=data;
         })
-      }
       }
 
 
