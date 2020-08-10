@@ -9,18 +9,18 @@ import { Libro } from 'src/app/Modelo/libro';
 })
 export class ListarComponent implements OnInit {
 
-libros : Libro[];
-  constructor(private service:ServiceService, private router:Router) { }
+libros: Libro[];
+  constructor(private LibroService:ServiceService, private router:Router) { }
 
-  ngOnInit(): void  {
-     this.listarlibros();
+  ngOnInit(){
+     this.LibroService.getbiblioteca()
+     .subscribe(data=>{
+       this.libros=data;
+     })
      
       }
-      listarlibros(){
-        this.service.getbiblioteca()
-        .subscribe(data=>{this.libros=data;
-        })
+      
       }
-      }
+      
 
 

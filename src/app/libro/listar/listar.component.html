@@ -14,11 +14,11 @@
     </tr>
 </thead>
 <tbody>
-    <tr *ngfor="let biblioteca of bibliotecas" class="text-center">
-        <th ></th>
-        <th ></th>
-        <th ></th>
-        <th ></th>
+    <tr *ngfor="let libro of libros" class="text-center">
+        <th >{{libro.idlibro}}</th>
+        <th >{{libro.titulo}}</th>
+        <th >{{libro.fecha}}</th>
+        <th >{{libro.editorial}}</th>
         <td>    
             <button class="btn btn-warning" > Edit </button>
             <button class="btn btn-danger" style="margin-left: 20px;"> Delete </button>

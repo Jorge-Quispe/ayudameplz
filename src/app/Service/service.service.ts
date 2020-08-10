@@ -6,12 +6,12 @@ import { Libro } from '../Modelo/libro';
   providedIn: 'root'
 })
 export class ServiceService {
- private  url = 'http://localhost:9090'
 
   constructor(private http:HttpClient) { }
+  Url = 'http://localhost:9090';
 
 
   getbiblioteca(){
-    this.http.get<Libro[]>(this.url+'/all');
+   return this.http.get<Libro[]>(this.Url + "/libros");
   }
 }
